@@ -1,0 +1,42 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Defenders - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP91.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"Debug/Defenders.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\Documents and Settings\Administrator\My Documents\Mine\My Project\Project Working\Project Deviation of YangBongGu\Defenders_Iso\CDBitmap.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP91.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP92.tmp" with contents
+[
+dinput8.lib dxguid.lib ddraw.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /incremental:yes /pdb:"Debug/Defenders.pdb" /debug /machine:I386 /out:"Debug/Defenders.exe" /pdbtype:sept 
+".\Debug\CDBitmap.obj"
+".\Debug\CDDraw.obj"
+".\Debug\CDInput.obj"
+".\Debug\CDMap.obj"
+".\Debug\CDSprite.obj"
+".\Debug\DMain.obj"
+".\Debug\ddutil.obj"
+".\Debug\Defenders.res"
+]
+Creating command line "link.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP92.tmp"
+<h3>Output Window</h3>
+Compiling...
+CDBitmap.cpp
+C:\Documents and Settings\Administrator\My Documents\Mine\My Project\Project Working\Project Deviation of YangBongGu\Defenders_Iso\CDBitmap.cpp(47) : warning C4101: 'file_handle' : unreferenced local variable
+C:\Documents and Settings\Administrator\My Documents\Mine\My Project\Project Working\Project Deviation of YangBongGu\Defenders_Iso\CDBitmap.cpp(48) : warning C4101: 'file_data' : unreferenced local variable
+C:\Documents and Settings\Administrator\My Documents\Mine\My Project\Project Working\Project Deviation of YangBongGu\Defenders_Iso\CDBitmap.cpp(394) : warning C4554: '>>' : check operator precedence for possible error; use parentheses to clarify precedence
+Linking...
+
+
+
+<h3>Results</h3>
+Defenders.exe - 0 error(s), 3 warning(s)
+</pre>
+</body>
+</html>

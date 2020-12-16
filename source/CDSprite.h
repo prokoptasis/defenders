@@ -1,0 +1,74 @@
+/////////////////////////////////////////////////////////////////////////////
+// Name : CDDraw.h
+// Desc : DDraw Class
+// Date : 2002.11.17
+// Mail : jhook@hanmail.net
+/////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////
+// INCLUDE
+/////////////////////////////////////////////////////////////////////////////
+#if !defined _CDSPRITE_H_
+#define _CDSPRITE_H_
+
+#include <windows.h>
+#include <ddraw.h>
+
+#include "CDBitmap.h"
+
+/////////////////////////////////////////////////////////////////////////////
+// DEFINE
+/////////////////////////////////////////////////////////////////////////////
+#define CDSPRITE_INITSTRUCT(d)  { memset(&d,0,sizeof(d)); d.dwSize=sizeof(d); }
+#define CDSPRITE_SAFERELEASE(p) { if(p) { (p)->Release(); (p)=NULL; } }
+
+/////////////////////////////////////////////////////////////////////////////
+// GLOBAL
+/////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////
+//	TYPE
+/////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////
+//	PROTOTYPES
+/////////////////////////////////////////////////////////////////////////////
+class CDSprite  
+{
+	public:
+	CDSprite();
+	~CDSprite();
+
+	typedef struct SPRITE_OBJ
+	{
+		int PosX;
+		int PosY;
+
+		int VelX;
+		int VelY;
+
+		int CellWidth;
+		int CellHeight;
+
+		int BMWidth;
+		int BMHeight;
+
+		int NumFrame;
+		int CurFrame;
+		
+		int AniState;
+		int AniAtt;
+		int AniIndex;
+		int CurDirection;
+		int*Animations[256];
+
+		LPDIRECTDRAWSURFACE7 Cell[256];
+	} SPRITE, *SPRITE_PTR;
+
+	HRESULT CreateSprite(LPDIRECTDRAW7 lpdd7, SPRITE_PTR sprite,int width,int height,int numframe,int MemFlag);
+	HRESULT LoadSprite(SPRITE_PTR sprite, CDBitmap::BITMAP_FILE_PTR bitmap);
+	HRESULT DrawSprite(HWND m_hWnd,BOOL m_bWindowed,SPRITE_PTR sprite,LPDIRECTDRAWSURFACE7 lpdds);
+	HRESULT DestroySprite(SPRITE_PTR sprite);
+	HRESULT SetAniSprite(SPRITE_PTR sprite,int *AniList,int direction);
+	HRESULT AnimateSprite(SPRITE_PTR sprite,int direction, int dx, int dy, int AniInc, int AniAtt);
+	RECT m_rcWindow;
+};
+
+#endif

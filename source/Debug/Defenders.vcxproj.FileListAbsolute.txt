@@ -1,0 +1,2 @@
+d:\_my_source\source_mine\031100_deviation_of_yangbonggu\source_Deviation of YangBongGu\Defenders_Iso\Debug\Defenders.exe
+d:\_my_source\source_mine\031100_deviation_of_yangbonggu\source_Deviation of YangBongGu\Defenders_Iso\Debug\Defenders.pdb
